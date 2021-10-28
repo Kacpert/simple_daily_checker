@@ -1,0 +1,11 @@
+<% @epicks.each_slice(4) do |epicks| %>
+  <div class="row">
+    <% epicks.each do |epick| %>
+      <div class="three columns">
+        <%= button_to epick.name, update_status_epick_path(epick), class: (epick.status? ? 'button-green' : 'button-red') %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to '^', new_epick_path %>

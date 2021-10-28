@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @epick.name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @epick.status %>
+</p>
+
+<%= link_to 'Edit', edit_epick_path(@epick) %> |
+<%= link_to 'Back', epicks_path %>
