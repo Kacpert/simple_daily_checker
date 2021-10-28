@@ -4,7 +4,7 @@ class EpicksController < ApplicationController
   # GET /epicks or /epicks.json
   def index
     Epick.all.where("updated_at < ?", DateTime.now).update_all(status: false)
-    @epicks = Epick.all
+    @epicks = Epick.all.order(:created_at)
   end
 
   # GET /epicks/1 or /epicks/1.json
